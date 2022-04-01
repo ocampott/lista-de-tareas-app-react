@@ -6,9 +6,9 @@ export const Header = () => {
   return (
     <header className="header">
         <h1 className="header__title">To do list</h1>
-        <button className="header__button">
+        <button className="header__btn">
             Don't show complete tasks
-            <FontAwesomeIcon icon={faEyeSlash} className="header__button-icon"/>
+            <FontAwesomeIcon icon={faEyeSlash} className="header__btn-icon"/>
         </button>
     </header>
   )
