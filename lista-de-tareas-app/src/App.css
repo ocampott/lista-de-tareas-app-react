@@ -1,7 +1,9 @@
 :root {
 	--verde: #80BE4E;
-	--azul: #007AEA;
+	--azul: #33a5b5;
 }
+
+/** General **/
 
 .container {
 	max-width: 700px;
@@ -13,4 +15,40 @@
 	border-radius: 3px;
 	display: grid;
 	grid-template-rows: auto auto 1fr;
+}
+
+/** Header **/
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+	padding: 0 30px;
+	background: var(--azul);
+	color: #fff;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.header__title {
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.header__button {
+	background: none;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	background: #2c6b74;
+	padding: 5px 10px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+}
+
+.header__button-icon {
+	font-size: 14px;
+	margin-left: 10px;
 }
