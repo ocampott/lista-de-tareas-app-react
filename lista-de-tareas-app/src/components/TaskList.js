@@ -1,7 +1,7 @@
 import React from 'react'
 import { Task } from './Task'
 
-export const TaskList = ({task, setTask}) => {
+export const TaskList = ({task, setTask, showCompletedTask}) => {
 
   const toggleCompleted = (id) => { 
     setTask(task.map((task) => {
@@ -40,7 +40,13 @@ export const TaskList = ({task, setTask}) => {
         {task.length > 0 
         ? 
         task.map((task) => {
+          if(showCompletedTask) {
             return <Task key={ task.id } task={ task } toggleCompleted={ toggleCompleted } editTaskText={ editTaskText } deleteTask={ deleteTask }/>
+          } else if(!task.completed) {
+            return <Task key={ task.id } task={ task } toggleCompleted={ toggleCompleted } editTaskText={ editTaskText } deleteTask={ deleteTask }/>
+          }
+          // eslint-disable-next-line array-callback-return
+          return;
         })
         : 
         <div className="task-list__msg">No task added</div>}
