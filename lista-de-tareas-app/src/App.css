@@ -53,6 +53,32 @@
 	margin-left: 10px;
 }
 
+/** Footer **/
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 40px;
+	padding: 0 30px;
+	background: var(--azul);
+	color: #fff;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.footer__btn {
+	background: none;
+	font-size: 22px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	background: #2c6b74;
+	padding: 5px 10px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+}
+
 /** Form **/
 
 .form {

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Form } from './components/Form';
 import { Header } from './components/Header';
 import { TaskList } from './components/TaskList';
+import { Footer } from './components/Footer';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
       <Header showCompletedTask={ showCompletedTask } setShowCompletedTask={ setShowCompletedTask }/>
       <Form task={ task } setTask={ setTask }/>
       <TaskList task={ task } setTask={ setTask } showCompletedTask={ showCompletedTask }/>
+      <Footer />
     </div>
   );
 }
