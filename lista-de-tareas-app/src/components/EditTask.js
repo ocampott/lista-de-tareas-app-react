@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 
-export const EditTask = ({ task, setEditTask }) => {
+export const EditTask = ({ task, setEditTask, editTaskText}) => {
 
   const [newTask, setNewTask] = useState(task.text)
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    editTaskText(task.id, newTask)
     setEditTask(false)
   }
   

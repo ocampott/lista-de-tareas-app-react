@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckSquare, faEdit, faSquare, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { EditTask } from './EditTask'
 
-export const Task = ({task, toggleCompleted}) => {
+export const Task = ({task, toggleCompleted, editTaskText}) => {
 
     const [editTask, setEditTask] = useState(false)
 
@@ -12,7 +12,7 @@ export const Task = ({task, toggleCompleted}) => {
         <FontAwesomeIcon onClick={() => toggleCompleted(task.id)} icon={task.completed ? faCheckSquare : faSquare} className="task-list__icon task-list__icon-check"/>
         <div className="task-list__text">
             {editTask ? 
-                <EditTask task={ task } setEditTask={ setEditTask }/>
+                <EditTask task={ task } setEditTask={ setEditTask } editTaskText={ editTaskText }/>
             :
                 task.text}
         </div>
