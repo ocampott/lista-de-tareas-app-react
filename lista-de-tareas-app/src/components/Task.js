@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckSquare, faEdit, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faEdit, faSquare, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { EditTask } from './EditTask'
 
-export const Task = ({task}) => {
+export const Task = ({task, toggleCompleted}) => {
 
     const [editTask, setEditTask] = useState(false)
 
     return (
     <li className="task-list__task">
-        <FontAwesomeIcon icon={faCheckSquare} className="task-list__icon task-list__icon-check"/>
+        <FontAwesomeIcon onClick={() => toggleCompleted(task.id)} icon={task.completed ? faCheckSquare : faSquare} className="task-list__icon task-list__icon-check"/>
         <div className="task-list__text">
             {editTask ? 
                 <EditTask task={ task } setEditTask={ setEditTask }/>

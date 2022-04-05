@@ -12,7 +12,7 @@ function App() {
     <div className="container">
       <Header />
       <Form task={ task } setTask={ setTask }/>
-      <TaskList task={ task }/>
+      <TaskList task={ task } setTask={ setTask }/>
     </div>
   );
 }
