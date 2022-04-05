@@ -23,12 +23,24 @@ export const TaskList = ({task, setTask}) => {
     }))
   }
 
+  const deleteTask = (id) => {
+    setTask(task.filter((task) => {
+      if(task.id !== id) {
+        return task
+      } else {
+        // eslint-disable-next-line array-callback-return
+        return;
+      }
+      
+    }))
+  }
+
   return (
     <ul className="task-list">
         {task.length > 0 
         ? 
         task.map((task) => {
-            return <Task key={ task.id } task={ task } toggleCompleted={ toggleCompleted } editTaskText={ editTaskText }/>
+            return <Task key={ task.id } task={ task } toggleCompleted={ toggleCompleted } editTaskText={ editTaskText } deleteTask={ deleteTask }/>
         })
         : 
         <div className="task-list__msg">No task added</div>}

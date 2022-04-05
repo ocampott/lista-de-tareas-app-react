@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckSquare, faEdit, faSquare, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { EditTask } from './EditTask'
 
-export const Task = ({task, toggleCompleted, editTaskText}) => {
+export const Task = ({task, toggleCompleted, editTaskText, deleteTask}) => {
 
     const [editTask, setEditTask] = useState(false)
 
@@ -18,7 +18,7 @@ export const Task = ({task, toggleCompleted, editTaskText}) => {
         </div>
         <div className="task-list__btn-container">
         <FontAwesomeIcon icon={faEdit} onClick={() => {setEditTask(!editTask)}} className="task-list__icon task-list__icon-action"/>
-        <FontAwesomeIcon icon={faTimes} className="task-list__icon task-list__icon-action"/>
+        <FontAwesomeIcon icon={faTimes} onClick={() => deleteTask(task.id)}className="task-list__icon task-list__icon-action"/>
         </div>
     </li>
   )
