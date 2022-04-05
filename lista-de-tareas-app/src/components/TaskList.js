@@ -41,9 +41,9 @@ export const TaskList = ({task, setTask, showCompletedTask}) => {
         ? 
         task.map((task) => {
           if(showCompletedTask) {
-            return <Task key={ task.id } task={ task } toggleCompleted={ toggleCompleted } editTaskText={ editTaskText } deleteTask={ deleteTask }/>
+            return <Task key={ task.id } task={ task } toggleCompleted={ toggleCompleted } editTaskText={ editTaskText } deleteTask={ deleteTask } />
           } else if(!task.completed) {
-            return <Task key={ task.id } task={ task } toggleCompleted={ toggleCompleted } editTaskText={ editTaskText } deleteTask={ deleteTask }/>
+            return <Task key={ task.id } task={ task } toggleCompleted={ toggleCompleted } editTaskText={ editTaskText } deleteTask={ deleteTask } />
           }
           // eslint-disable-next-line array-callback-return
           return;

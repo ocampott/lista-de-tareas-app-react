@@ -114,6 +114,12 @@
 	width: 100%;
 }
 
+.task-list__text-completed {
+	text-align: left;
+	width: 100%;
+	text-decoration: line-through;
+}
+
 .task-list__task:hover .task-list__icon-action {
 	opacity: 0.5;
 }

@@ -19,6 +19,8 @@ export const Form = ({task, setTask}) => {
             text: inputTask,
             completed: false
         }]);
+
+        setInputTask("");
     }
 
   return (

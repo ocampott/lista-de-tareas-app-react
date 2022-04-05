@@ -6,11 +6,11 @@ import { EditTask } from './EditTask'
 export const Task = ({task, toggleCompleted, editTaskText, deleteTask}) => {
 
     const [editTask, setEditTask] = useState(false)
-
+    
     return (
     <li className="task-list__task">
         <FontAwesomeIcon onClick={() => toggleCompleted(task.id)} icon={task.completed ? faCheckSquare : faSquare} className="task-list__icon task-list__icon-check"/>
-        <div className="task-list__text">
+        <div className={ !task.completed ? "task-list__list__text-line" : "task-list__text-completed"}>
             {editTask ? 
                 <EditTask task={ task } setEditTask={ setEditTask } editTaskText={ editTaskText }/>
             :
