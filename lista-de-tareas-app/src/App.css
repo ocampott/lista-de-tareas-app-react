@@ -138,6 +138,7 @@
 .task-list__text {
 	text-align: left;
 	width: 100%;
+	
 }
 
 .task-list__text-completed {
@@ -206,4 +207,5 @@
 	padding: 0 10px;
 	font-family: 'Roboto', sans-serif;
 	border-radius: 3px;
+	text-decoration: none !important;
 }
