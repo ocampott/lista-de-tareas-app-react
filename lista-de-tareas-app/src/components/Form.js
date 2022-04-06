@@ -32,7 +32,6 @@ export const Form = ({task, setTask}) => {
             value={inputTask}
             onChange={(e) => handleInput(e)}
         />
-
         <button type="submit" className="form__btn">
             <FontAwesomeIcon className="form__btn-icon" icon={faPlusSquare}/>
         </button>

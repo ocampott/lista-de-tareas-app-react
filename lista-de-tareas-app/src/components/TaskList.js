@@ -49,7 +49,7 @@ export const TaskList = ({task, setTask, showCompletedTask}) => {
           return;
         })
         : 
-        <div className="task-list__msg">No task added</div>}
+        <div className="task-list__msg">No task added! Try adding one</div>}
     </ul>
   )
 }
